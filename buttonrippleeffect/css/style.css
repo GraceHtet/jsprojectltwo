@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #000;
+    height:100vh;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    margin:0;
+    overflow:hidden;
+}
+.btnripple{
+    background-color:royalblue;
+    color:#fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing:2px;
+    border:1px solid royalblue;
+
+    padding:20px 30px;
+    margin:0 10px;
+
+    position:relative;
+
+    overflow:hidden;
+ }
+.btnripple:focus{
+    outline:none;
+}
+.btnripple .circle{
+    width:100px;
+    height:100px;
+    background-color:#fff;
+    border-radius: 50%;
+
+    position:absolute;
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%) scale(0);
+
+    animation-name:myani;
+    animation-duration:0.5s;
+    animation-timing-function:ease-out;
+}
+@keyframes myani{
+    to{
+        transform:translate(-50%,-50%) scale(3);
+        opacity:0;
+    }
+}

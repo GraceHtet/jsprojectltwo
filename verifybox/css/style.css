@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color:#f4f4f4;
+    height:100vh;
+    
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    margin:0;
+}
+.container{
+    max-width:1000px;
+    background-color:#fff;
+    border:3px solid #000;
+    border-radius:30px;
+    text-align:center;
+    padding:30px;
+}
+.code-container{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+
+    margin: 40px 0;
+}
+.code{
+    width:100px;
+    height:120px;
+    font-size:75px;
+    text-align:center;
+    border:1px solid #eee;
+    border-radius:5px;
+    margin:1%;
+
+    /* for firefox */
+    -moz-appearance:textfield;  
+}
+
+/* type=numberဆိုရင် ဘေးကoriginal ပါတဲ့ up arrow down arrow key ကိုဖျောက်ဖို့
+ firefox အတွက်က textfieldဆိုရပေမဲ့
+ chromeအတွက်ဆိုpseudo elemenနဲ့ပြန်ခေါ်ပေးရတယ်
+ appearance noneက browserတိုင်းမှာမရလို့ browserတစ်ခုချင်းစီအတွက် ပြန်ခေါ်ပေးရတာ */
+
+/* for chrome */
+.code::-webkit-outer-spin-butto,
+.code::-webkit-inner-spin-button{
+    -webkit-appearance:none;
+    margin:0;
+}
+/* 9ကျော်သွားရင် validမဖြစ်တော့ဘူး ဘာလို့ဆို maxက 9အထိပဲပေးထားလို့ */
+.code:valid{
+    border-color:skyblue;
+    box-shadow:5px 5px 5px rgba(0,0,0,0.2);
+}
+.info{
+    max-width:400px;
+    background-color: #eaeaea;
+    padding:10px;
+    line-height:20px;
+    border-radius:5px;
+
+    display:inline-block;
+}
+
+@media(max-width:700px){
+    .code-container{
+        /* မဆန့်တော့ရင် အောက်ကိုဆင်းပေးတာ */
+        flex-wrap: wrap;
+    }
+    .code{
+        width:70px;
+        height:80px;
+        font-size:60px;
+    }
+}

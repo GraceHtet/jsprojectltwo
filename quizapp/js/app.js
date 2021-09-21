@@ -1,4 +1,6 @@
-
+// ရှိသမျှမေးခွန်းတွေကို arrayခန်းထဲလာထည့်ထားစေချင်လို့
+// answer နဲ့ အဖြေမှန်မမှန်ပါထည့်စေချင်လို့ objectထဲထပ်ထည့်
+// key ကိုတိုက်ရိုက်လှမ်းခေါ်လို့မရ string formatထဲထည့်ပြီးခေါ်ရ("" or '' ထဲထည့်)
 
 const quizdatas= [
     {
@@ -59,7 +61,7 @@ let currentquiz = 0;
 let score = 0;
 
 // console.log(quizdatas[currentquiz]);
-
+// array ကိုအရင်ဖြေ ပြီးမှယူတာ
 
 function loadquiz(){
 

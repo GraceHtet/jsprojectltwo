@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Mulish', sans-serif;
+    background-color:#7158e2;
+    color:#fff;
+    height:100vh;
+    
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin:0;
+    overflow:hidden;
+}
+.container{
+    background-color:rgba(0,0,0,0.4);
+    padding:20px 40px;
+    border-radius: 5px;
+}
+.container h1{
+    text-align:center;
+    margin-bottom:30px;
+}
+.form-group{
+    width:300px;
+    margin:20px 0 40px 0;
+
+    position:relative;
+}
+.form-group input{
+    width:100%;
+    background-color:transparent;
+    font-size:18px;
+    color:#fff;
+    border:none;
+    border-bottom:2px solid #fff;
+    padding:15px 0;
+
+    display:block;
+
+    
+}
+.form-group input:focus{
+    outline:none;
+    border-bottom-color:#4287f5;
+}
+.btn{
+    width:100%;
+    background:#4287f5;
+    font-size:16px;
+    padding:15px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+.btn:focus{
+    outline:0;
+}
+.btn:active{
+    transform:scale(0.98);
+}
+.text{
+    margin-top:30px;
+}
+.conatiner a{
+    text-decoration:none;
+    color:#4287f5;
+}
+.form-group label{
+    position:absolute;
+    top:15px;
+    left:0;
+    
+    transition:all 0.3s ease; 
+}
+.form-group label span{
+    display:inline-block;
+    transition:all 0.3s ease;
+}
+.form-group input:focus + label span
+.form-group input:valid + label span{
+    color:#4287f5;
+    transform:translateY(-30px);
+}
+
+/* valid pseudo classကို input typeနဲ့ input valueနဲ့တိုက်ပြီးဖမ်းလို့ရ
+eg: type ကို requiredပေးထားပြီး ရိုက်လိုက်တဲ့ စာတွေကို letterလား numberလားဆိုတာကိုvalidနဲ့တိုက်စစ်လို့ရ */

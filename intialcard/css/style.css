@@ -1,0 +1,70 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    font-family:sans-serif;
+    height:100vh;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    margin:0;
+    overflow:hidden;
+}
+.container{
+    /* vw= viewport width */
+    width:90vw;
+
+    display:flex;
+}
+.panel{
+    height:80vh;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    border-radius:50px;
+    color:#fff;
+    cursor:pointer;
+
+    margin:10px;
+
+    /* သတ်မှတ်ထားတဲ့ စည်းဝိုင်း (box)ထဲမှာ အကျုံ့အချဲ့လုပ်ချင်ရင် flex ကိုသုံး
+    flexမပါ divအထဲမှာ ဘာelement မှလည်းမပါရင် ပုံကပျောက်သွားမှာ
+
+    ကျုံ့သွားစေချင်တဲ့ widthကိုပြောတာ */
+    flex:0.5;
+    
+    position:relative;
+
+    transition:all 0.7s ease-in;
+
+}
+/*h3 ဖျောက်လိုက်ရင် ပုံပါပျောက်သွားဘာလို့ဆို bg-imgအနေနဲ့ ထည့်ထားတာမို့ divထဲမှာရှိတဲ့ element က စာပဲရှိတာမို့
+စာကလွတ်သွားရင် divကြီးက ပျောက်သွားတဲ့ပုံမျိုးဖြစ်သွားတာ */
+.panel h3{
+    font-size:24px;
+
+    position:absolute;
+    bottom:20px;
+    left:40px;
+
+    /* heading tagက margin ပါတာမို့ marginကိုဖြုတ်ပေး */
+    margin:0;
+
+    opacity:0;
+}
+.panel.active{
+    flex:5;
+}
+.panel.active h3{
+    opacity:1;
+}
+@media(max-width:500px){
+    .container{
+        width:100vw;
+    }
+    .panel:nth-of-type(5),.panel:nth-of-type(6){
+        display:none;
+    }
+}

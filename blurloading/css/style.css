@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family:sans-serif;
+    height:100vh;
+
+    display:flex;
+    justify-content: center;
+    align-items:center;
+
+    margin:0;
+    overflow:hidden;
+}
+.bg{
+    /* width:100vw;
+    height:100vh; */
+
+    /* 100vw htet po p u chin yin calc function nae use */
+    /* Don't write the sign just next to the number use spacing */
+    
+    width:calc(100vw + 60px);
+    height:calc(100vh + 60px);
+
+    background-image:url(../img/1.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+
+    position:absolute;
+    /* top:0;
+    left:0; */
+
+    top:-30px;
+    left:-30px;
+
+    z-index:-1;
+
+    filter:blur(70px);
+
+}
+.loadingtext{
+    font-size:50px;
+    color:#fff;
+}
