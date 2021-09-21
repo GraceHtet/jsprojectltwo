@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quiz App</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+
+
+        <div id="quiz" class="quiz-container">
+
+            <div class="quiz-header">
+
+                <h2 id="question">Question Text</h2>
+
+                <ul>
+                    <li>
+                                            <!-- ဘယ် value ရွေးခဲ့လဲဆိုတာကိုသိဖို့                               ဘယ်answerရွေးခဲ့လဲဆိုတာကိုသိဖို့ -->
+                        <input type="radio" name="answer" id="a" class="answer"/><label for="a" id="a_text">Answer1</label>
+                    </li>
+
+                    <li>
+                        <input type="radio" name="answer" id="b" class="answer"/><label for="b" id="b_text">Answer2</label>
+                    </li>
+
+                    <li>
+                        <input type="radio" name="answer" id="c" class="answer"/><label for="c" id="c_text">Answer3</label>
+                    </li>
+
+                    <li>
+                        <input type="radio" name="answer" id="d" class="answer"/><label for="d" id="d_text">Answer4</label>
+                    </li>
+
+                    <li>
+                        <input type="radio" name="answer" id="e" class="answer"/><label for="e" id="e_text">Answer5</label>
+                    </li>
+                </ul>
+            </div>
+
+            <button type="submit" id="submit" class="btn">Submit</button>
+            
+        </div>
+
+        <script src="js/app.js" type="text/javascript"></script>
+    </body>
+</html>
